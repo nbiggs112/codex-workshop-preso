@@ -101,12 +101,30 @@
       <!-- Installing Codex -->
       <section class="content-slide" style="padding-bottom: 120px !important;">
         <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
-        <h2>Installing Codex</h2>
-        <ol style="margin-top:0.6em; font-family:'myriad-pro',sans-serif; font-size:0.88em; line-height:1.7;">
-          <li>Start Menu &rarr; <strong>Company Portal</strong></li>
-          <li>Search &#x201C;Codex&#x201D; &rarr; Click <strong>Codex</strong></li>
-          <li>Click <strong>Install</strong> and wait&#x2014;it&#x2019;ll finish on its own</li>
-        </ol>
+        <div style="display:flex; align-items:center; gap:2em;">
+          <div style="flex:1;">
+            <h2>Installing Codex</h2>
+            <ol style="margin-top:0.6em; font-family:'myriad-pro',sans-serif; font-size:0.88em; line-height:1.7;">
+              <li>Start Menu &rarr; <strong>Company Portal</strong></li>
+              <li>Search &#x201C;Codex&#x201D; &rarr; Click <strong>Codex</strong></li>
+              <li>Click <strong>Install</strong> and wait&#x2014;it&#x2019;ll finish on its own</li>
+            </ol>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 170" style="width:110px; flex-shrink:0; opacity:0.85;">
+            <!-- Head -->
+            <circle cx="50" cy="20" r="13" fill="none" stroke="#003963" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Body -->
+            <line x1="50" y1="33" x2="50" y2="100" stroke="#003963" stroke-width="5.5" stroke-linecap="round"/>
+            <!-- Raised right arm -->
+            <path d="M50,58 Q62,42 78,24" fill="none" stroke="#003963" stroke-width="5.5" stroke-linecap="round"/>
+            <!-- Left arm down -->
+            <path d="M50,58 Q36,72 24,82" fill="none" stroke="#003963" stroke-width="5.5" stroke-linecap="round"/>
+            <!-- Left leg -->
+            <line x1="50" y1="100" x2="33" y2="148" stroke="#003963" stroke-width="5.5" stroke-linecap="round"/>
+            <!-- Right leg -->
+            <line x1="50" y1="100" x2="64" y2="148" stroke="#003963" stroke-width="5.5" stroke-linecap="round"/>
+          </svg>
+        </div>
         <p style="font-family:'myriad-pro',sans-serif; font-size:0.72em; color:#888; font-style:italic; position:absolute; bottom:60px; left:100px; right:100px; margin:0;">
           macOS: install from <span style="text-decoration:underline;">developers.openai.com/codex/quickstart</span>
         </p>
@@ -134,6 +152,9 @@
         <p style="font-family:'myriad-pro',sans-serif; font-size:0.82em; margin-top:0.8em; color:#555;">
           Stuff will scroll by&#x2014;that&#x2019;s normal. You don&#x2019;t need to understand every line.
         </p>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.82em; margin-top:0.4em; color:#555;">
+          Codex can also install its own tools&#x2014;if you give it permission.
+        </p>
         <p style="font-family:'myriad-pro',sans-serif; font-size:0.72em; color:#888; font-style:italic; position:absolute; bottom:60px; left:100px; right:100px; margin:0;">
           More tools on your machine = more Codex can do.
         </p>
@@ -144,24 +165,35 @@
       <section class="content-slide">
         <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
         <h2>Credits: What Counts?</h2>
-        <div style="margin-top:0.8em; display:flex; flex-direction:column; gap:1em;">
-          <div>
-            <p style="font-family:'myriad-pro',sans-serif; font-size:0.88em; color:var(--cu-gold); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4em;">Uses Credits</p>
-            <ul>
-              <li>Messages sent to Codex</li>
-            </ul>
+        <div style="margin-top:0.8em; display:grid; grid-template-columns:1fr auto; gap:1.4em; align-items:start;">
+          <!-- Left: uses / doesn't use -->
+          <div style="display:flex; flex-direction:column; gap:0.9em;">
+            <div>
+              <p style="font-family:'myriad-pro',sans-serif; font-size:0.88em; color:var(--cu-gold); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4em;">Uses Credits</p>
+              <ul>
+                <li>Messages sent to Codex</li>
+              </ul>
+            </div>
+            <hr style="border:none; border-top:1px solid var(--cu-gray); margin:0.2em 0;" />
+            <div>
+              <p style="font-family:'myriad-pro',sans-serif; font-size:0.88em; color:#888; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4em;">Does not use Credits</p>
+              <ul>
+                <li>Viewing what it&#x2019;s made</li>
+                <li>Publishing to GitHub</li>
+                <li>Running programs it created</li>
+              </ul>
+            </div>
           </div>
-          <hr style="border:none; border-top:1px solid var(--cu-gray); margin:0.2em 0;" />
-          <div>
-            <p style="font-family:'myriad-pro',sans-serif; font-size:0.88em; color:#888; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4em;">Does not use Credits</p>
-            <ul>
-              <li>Viewing what it&#x2019;s made</li>
-              <li>Publishing to GitHub</li>
-              <li>Running programs it created</li>
-            </ul>
+          <!-- Right: rolling window info -->
+          <div style="width:220px; background:var(--cu-blue); border-radius:4px; padding:1.1em 1.2em; display:flex; flex-direction:column; align-items:center; gap:0.6em; text-align:center;">
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.68em; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--cu-gold); margin:0;">Credit Limit</p>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:1.8em; font-weight:700; color:white; line-height:1; margin:0;">~300</p>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; color:rgba(255,255,255,0.75); margin:0; line-height:1.4;">messages every 5 hours</p>
+            <hr style="border:none; border-top:1px solid rgba(255,255,255,0.2); width:100%; margin:0.2em 0;" />
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.74em; color:white; margin:0; line-height:1.5; font-style:italic;">Hitting the limit often?<br/>Come talk to us.</p>
           </div>
         </div>
-        <aside class="notes">People worry about burning credits on things that don't cost anything.</aside>
+        <aside class="notes">People worry about burning credits on things that don't cost anything. The rolling window means limits aren't permanent — credits come back as older messages age out. If someone hits limits repeatedly, that's a signal they're getting real value and we should talk about their usage.</aside>
       </section>
 
       <!-- Prompting Tips -->
@@ -302,6 +334,24 @@
         <aside class="notes">Skateboard = minimum viable thing that moves. Ship it, then iterate.</aside>
       </section>
 
+      <!-- Writing Your First Codex Prompt -->
+      <section class="content-slide" style="padding-bottom:80px !important;">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Writing Your First Codex Prompt</h2>
+        <ul style="margin-top:0.5em;">
+          <li><strong>Context</strong> &mdash; a folder on your computer</li>
+          <li><strong>Platform</strong> &mdash; what tools to use <em style="color:#888;">(&#x201C;build learning modules in HTML5&#x201D;)</em></li>
+          <li><strong>Task</strong> &mdash; what you want it to do, as specific as possible</li>
+        </ul>
+        <div style="margin-top:1.1em; background:var(--cu-gray); border-left:4px solid var(--cu-blue); border-radius:2px; padding:0.7em 1em;">
+          <p style="font-family:'myriad-pro',sans-serif; font-size:0.7em; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--cu-blue); margin:0 0 0.4em;">Example prompt</p>
+          <p style="font-family:'minion-pro',serif; font-size:0.8em; color:#333; margin:0; line-height:1.6; font-style:italic;">
+            &#x201C;Using &#x2018;chapter3.pptx&#x2019; in this folder, create an interactive webpage in HTML5 and JS to teach and illustrate the 7 basic levels of taxonomy.&#x201D;
+          </p>
+        </div>
+        <aside class="notes">Walk through each component. Context = where Codex looks. Platform = the constraint it works within. Task = the actual deliverable. The example hits all three.</aside>
+      </section>
+
       <!-- Have Fun -->
       <section class="dark-slide" style="text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center;">
         <h1 style="font-size:2.4em; margin-bottom:0.4em;">Have Fun!</h1>
@@ -342,6 +392,39 @@
           </div>
         </div>
         <aside class="notes">KB article for publishing to GitHub: https://cedarville.teamdynamix.com/TDClient/2045/Portal/KB/ArticleDet?ID=171134 — don't need to go deep on any of these, just demystify the names.</aside>
+      </section>
+
+      <!-- Codex On Campus Webinar -->
+      <section class="content-slide" style="padding-bottom:80px !important;">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Codex On Campus</h2>
+        <div style="margin-top:0.7em; display:grid; grid-template-columns:1fr auto; gap:2em; align-items:start;">
+          <!-- Left: details -->
+          <div style="display:flex; flex-direction:column; gap:0.7em;">
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.82em; color:#555; margin:0; line-height:1.5;">
+              OpenAI&#x2019;s free webinar for students, researchers, faculty, and staff&#x2014;real examples of Codex supporting day-to-day work.
+            </p>
+            <ul style="font-size:0.82em; margin-top:0;">
+              <li>Reducing routine administrative work</li>
+              <li>Improving productivity</li>
+              <li>Helping teams work more efficiently</li>
+              <li>Supporting faster decision-making</li>
+            </ul>
+            <div class="highlight-box" style="margin-top:0.2em;">
+              <strong>April 14, 2026</strong> &nbsp;&middot;&nbsp; 4&#x202F;PM PT &nbsp;/&nbsp; 7&#x202F;PM ET
+            </div>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.76em; color:#888; font-style:italic; margin:0; line-height:1.5;">
+              Share with your campus community&#x2014;student groups, career centers, department channels.
+            </p>
+          </div>
+          <!-- Right: QR code -->
+          <div style="display:flex; flex-direction:column; align-items:center; gap:0.5em;">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&color=003963&data=https%3A%2F%2Facademy.openai.com%2Fhome%2Fclubs%2Fhigher-education-05x4z%2Fevents%2Fcodex-on-campus-cjhlsrvumc"
+                 alt="Registration QR code" style="width:160px; height:160px; border-radius:4px;" />
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.65em; color:#888; text-transform:uppercase; letter-spacing:0.08em; margin:0;">Register</p>
+          </div>
+        </div>
+        <aside class="notes">Encourage people to register before they leave. Share the link in Slack/email so they have it.</aside>
       </section>
 
       <!-- Glossary -->
