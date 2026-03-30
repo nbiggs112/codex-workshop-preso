@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codex Workshop</title>
+  <link rel="stylesheet" href="https://use.typekit.net/apf8ssc.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <style>
+    :root {
+      --cu-blue: #003963; --cu-gold: #FBB93A;
+      --cu-orange: #F59536; --cu-white: #FFFFFF; --cu-gray: #E7E6E6;
+    }
+    .reveal { font-family: 'minion-pro', serif; font-size: 32px; color: #222; }
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'myriad-pro', sans-serif; font-weight: 600;
+      color: var(--cu-blue); text-transform: none; letter-spacing: 0.01em;
+    }
+    .dark-slide { background: var(--cu-blue) !important; }
+    .reveal .slides section.dark-slide h1,
+    .reveal .slides section.dark-slide h2,
+    .reveal .slides section.dark-slide h3,
+    .reveal .slides section.dark-slide p,
+    .reveal .slides section.dark-slide li { color: white; }
+    .content-slide { padding: 40px 100px !important; text-align: left !important; align-items: flex-start !important; width: 100% !important; box-sizing: border-box !important; }
+    .slide-logo {
+      position: absolute; top: 18px; left: 24px; height: 44px; z-index: 10;
+    }
+    .highlight-box {
+      border-left: 4px solid var(--cu-gold);
+      background: var(--cu-gray); padding: 0.6em 0.8em;
+      font-family: 'myriad-pro', sans-serif; font-size: 0.85em; border-radius: 2px;
+    }
+    .callout-box {
+      background: var(--cu-blue); color: white; padding: 0.7em 1em;
+      font-style: italic; font-family: 'myriad-pro', sans-serif;
+      font-size: 0.88em; border-radius: 3px;
+    }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; }
+    .big-number {
+      font-family: 'myriad-pro', sans-serif; font-size: 4em;
+      font-weight: 700; line-height: 1; color: var(--cu-blue);
+    }
+    .reveal ul, .reveal ol { list-style: disc; margin: 0; padding-left: 1.2em; max-width: 820px; text-align: left; }
+    .reveal ol { list-style: decimal; }
+    .reveal ul li, .reveal ol li { margin-bottom: 0.3em; font-size: 0.9em; padding-left: 0.2em; }
+    .reveal ul ul { font-size: 0.88em; margin-top: 0.2em; }
+    .step-list { list-style: none; margin: 0; padding: 0; }
+    .step-list li {
+      font-family: 'myriad-pro', sans-serif; font-size: 0.82em;
+      padding: 0.35em 0.6em; border-left: 3px solid var(--cu-gold);
+      margin-bottom: 0.5em; background: var(--cu-gray); border-radius: 2px;
+    }
+    .step-list li code {
+      background: none; font-size: 0.9em; color: var(--cu-blue);
+    }
+    .emoji-big { font-size: 2.5em; line-height: 1.2; }
+    .progression {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.6em; font-family: 'myriad-pro', sans-serif; font-size: 1.1em;
+      flex-wrap: wrap; margin-top: 0.6em;
+    }
+    .progression .item {
+      background: var(--cu-gray); border-radius: 4px;
+      padding: 0.4em 0.8em; font-weight: 600; color: var(--cu-blue);
+    }
+    .progression .arrow { color: var(--cu-gold); font-size: 1.2em; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- TITLE SLIDE -->
+      <section class="dark-slide" style="text-align:center;">
+        <img src="assets/cu_whitegold_h.png" alt="Cedarville University"
+             style="height:64px; margin-bottom:1.5em;" />
+        <h1 style="font-size:2.2em; margin-bottom:0.3em;">Codex Workshop</h1>
+        <p style="color:var(--cu-gold); font-family:'myriad-pro',sans-serif;
+                  font-size:0.9em; letter-spacing:0.04em; margin-top:0;">
+          March 31, 2026 &nbsp;·&nbsp; 10 a.m.
+        </p>
+        <p style="color:white; font-family:'myriad-pro',sans-serif;
+                  font-size:0.78em; letter-spacing:0.03em; margin-top:0.5em;">
+          Micah Cooper &nbsp;|&nbsp; Nat Biggs
+        </p>
+        <aside class="notes">Text Micah with headcount as soon as it starts.</aside>
+      </section>
+
+      <!-- SECTION: PLUMBING -->
+      <section class="dark-slide" style="text-align:center;">
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.8em;
+                  color:var(--cu-gold); letter-spacing:0.12em; text-transform:uppercase;
+                  margin-bottom:0.4em;">Section 1</p>
+        <h1>Plumbing</h1>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.8em; opacity:0.7;">
+          Getting Codex installed and connected
+        </p>
+      </section>
+
+      <!-- Installing Codex -->
+      <section class="content-slide" style="padding-bottom: 120px !important;">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Installing Codex</h2>
+        <ol style="margin-top:0.6em; font-family:'myriad-pro',sans-serif; font-size:0.88em; line-height:1.7;">
+          <li>Start Menu &rarr; <strong>Company Portal</strong></li>
+          <li>Search &#x201C;Codex&#x201D; &rarr; Click <strong>Codex</strong></li>
+          <li>Click <strong>Install</strong> and wait&#x2014;it&#x2019;ll finish on its own</li>
+        </ol>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.72em; color:#888; font-style:italic; position:absolute; bottom:60px; left:100px; right:100px; margin:0;">
+          macOS: install from <span style="text-decoration:underline;">developers.openai.com/codex/quickstart</span>
+        </p>
+        <aside class="notes">Walk the room. Make sure everyone gets through the install before moving on.</aside>
+      </section>
+
+      <!-- SECTION: HOW DOES IT WORK -->
+      <section class="dark-slide" style="text-align:center;">
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.8em;
+                  color:var(--cu-gold); letter-spacing:0.12em; text-transform:uppercase;
+                  margin-bottom:0.4em;">Section 2</p>
+        <h1>How Does It Work?</h1>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.8em; opacity:0.7;">
+          Nuts and bolts of having an AI employee
+        </p>
+      </section>
+
+      <!-- Running Locally -->
+      <section class="content-slide" style="padding-bottom: 120px !important;">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Codex Raids Your Toolbox</h2>
+        <div class="highlight-box" style="margin-top:0.6em;">
+          Git &nbsp;&middot;&nbsp; Node/npm &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; PowerShell
+        </div>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.82em; margin-top:0.8em; color:#555;">
+          Stuff will scroll by&#x2014;that&#x2019;s normal. You don&#x2019;t need to understand every line.
+        </p>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.72em; color:#888; font-style:italic; position:absolute; bottom:60px; left:100px; right:100px; margin:0;">
+          More tools on your machine = more Codex can do.
+        </p>
+        <aside class="notes">Reassure people that watching code fly by is totally fine.</aside>
+      </section>
+
+      <!-- Credits -->
+      <section class="content-slide">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Credits: What Counts?</h2>
+        <div style="margin-top:0.8em; display:flex; flex-direction:column; gap:1em;">
+          <div>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.88em; color:var(--cu-gold); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4em;">Uses Credits</p>
+            <ul>
+              <li>Messages sent to Codex</li>
+            </ul>
+          </div>
+          <hr style="border:none; border-top:1px solid var(--cu-gray); margin:0.2em 0;" />
+          <div>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.88em; color:#888; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4em;">Does not use Credits</p>
+            <ul>
+              <li>Viewing what it&#x2019;s made</li>
+              <li>Publishing to GitHub</li>
+              <li>Running programs it created</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="notes">People worry about burning credits on things that don't cost anything.</aside>
+      </section>
+
+      <!-- Prompting Tips -->
+      <section class="content-slide">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Prompting Codex</h2>
+        <ul style="margin-top:0.4em;">
+          <li>Skip the pleasantries</li>
+          <li>Be <strong>direct and specific</strong>&#x2014;but not wordy</li>
+          <li>Be the boss</li>
+        </ul>
+        <div class="callout-box" style="margin-top:0.8em;">
+          Describe reality as it ought to be, and let Codex bridge the gap.
+        </div>
+        <aside class="notes">This is the key mindset shift. They&#x2019;re not asking for help&#x2014;they&#x2019;re directing.</aside>
+      </section>
+
+      <!-- When Codex Gets Off Track -->
+      <section class="content-slide">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>When It Gets Off Track</h2>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.82em; font-style:italic; color:var(--cu-blue); margin-bottom:0.5em;">
+          Sometimes Codex wanders. Try these:
+        </p>
+        <ul>
+          <li>Treat it like a student: <em style="color:#888;">&#x201C;What problem are you running into?&#x201D;</em></li>
+          <li>Stuck planning: <em style="color:#888;">&#x201C;Go ahead and implement.&#x201D;</em></li>
+          <li>Stuck in a loop: <em style="color:#888;">&#x201C;Try a different approach.&#x201D;</em></li>
+        </ul>
+        <aside class="notes">I do this too&#x2014;normalize it. It&#x2019;s not a failure, it&#x2019;s part of the workflow.</aside>
+      </section>
+
+      <!-- SECTION: WHAT'S ON YOUR LIST -->
+      <section class="dark-slide" style="text-align:center;">
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.8em;
+                  color:var(--cu-gold); letter-spacing:0.12em; text-transform:uppercase;
+                  margin-bottom:0.4em;">Section 3</p>
+        <h1>What&#x2019;s on Your List?</h1>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.8em; opacity:0.7;">
+          Let&#x2019;s find your first project
+        </p>
+      </section>
+
+      <!-- Discussion prompts -->
+      <section class="content-slide">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Homework Due</h2>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.82em; font-style:italic; color:var(--cu-blue); margin-bottom:0.5em;">
+          Last session we gave you some assignments:
+        </p>
+        <ul>
+          <li>What did you use your Sugru for?</li>
+          <li>How many things are on your &#x201C;sigh list&#x201D;?</li>
+          <li>Where would you like to start today?</li>
+        </ul>
+        <aside class="notes">Work the room. Get a few people to share before moving on. The Sugru question is a callback to last session's homework.</aside>
+      </section>
+
+      <!-- SECTION: PHILOSOPHY -->
+      <section class="dark-slide" style="text-align:center;">
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.8em;
+                  color:var(--cu-gold); letter-spacing:0.12em; text-transform:uppercase;
+                  margin-bottom:0.4em;">Section 4</p>
+        <h1>Philosophy</h1>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.8em; opacity:0.7;">
+          How to think about working with Codex
+        </p>
+      </section>
+
+      <!-- Codex as extension -->
+      <section class="content-slide">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Codex is an Extension of You</h2>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.82em; font-style:italic; color:var(--cu-blue); margin-bottom:0.5em;">
+          You&#x2019;re the one with the vision&#x2014;Codex writes the code.
+        </p>
+        <ul style="margin-top:0.4em;">
+          <li><strong>If it&#x2019;s dumber than you</strong>&#x2014;great! Tell it exactly what you want.</li>
+          <li><strong>If it&#x2019;s smarter than you</strong>&#x2014;hitch a ride.</li>
+        </ul>
+        <aside class="notes">This is the whole framing. An extension of yourself means you&#x2019;re still responsible for the outcome.</aside>
+      </section>
+
+      <!-- Playground Rules -->
+      <section class="content-slide">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Playground Rules</h2>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.82em; font-style:italic; color:var(--cu-blue); margin-bottom:0.5em;">
+          What you learned in kindergarten still applies.
+        </p>
+        <ul>
+          <li>
+            <strong>Keep your hands to yourself</strong>
+            <div style="font-family:'myriad-pro',sans-serif; font-size:0.82em; color:#555; margin-top:0.1em;">If it&#x2019;s not yours to touch, it&#x2019;s not Codex&#x2019;s either.</div>
+          </li>
+          <li>
+            <strong>Ask before you touch</strong>
+            <div style="font-family:'myriad-pro',sans-serif; font-size:0.82em; color:#555; margin-top:0.1em;">Don&#x2019;t use Codex to wander into someone else&#x2019;s work uninvited.</div>
+          </li>
+          <li>
+            <strong>Take turns</strong>
+            <div style="font-family:'myriad-pro',sans-serif; font-size:0.82em; color:#555; margin-top:0.1em;">Not everyone will adopt at the same pace.</div>
+          </li>
+        </ul>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.72em; color:#888; font-style:italic; margin-top:1em; text-align:center;">
+          &#x201C;Seek first to understand, then to be understood.&#x201D; &#x2014;Stephen Covey
+        </p>
+        <p style="font-family:'myriad-pro',sans-serif; font-size:0.72em; color:#888; font-style:italic; margin-top:0.6em; text-align:center;">
+          Chesterton&#x2019;s Fence: don&#x2019;t remove what you don&#x2019;t understand yet.
+        </p>
+        <aside class="notes">Chesterton's Fence: if you don't know why something exists, find out before asking Codex to delete or replace it.</aside>
+      </section>
+
+      <!-- Eat an Elephant / Iteration -->
+      <section class="content-slide">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Iteration</h2>
+        <ul style="margin-top:0.5em;">
+          <li>Don&#x2019;t accept the first effort&#x2014;unless it&#x2019;s great!</li>
+          <li>Tell Codex <strong>specifically</strong> what&#x2019;s wrong</li>
+          <li>Get something working, then improve it</li>
+        </ul>
+        <div class="progression fragment" style="margin-top:1em; margin-bottom:0.6em;">
+          <span class="item">Crawl</span>
+          <span class="arrow">&rarr;</span>
+          <span class="item">Walk</span>
+          <span class="arrow">&rarr;</span>
+          <span class="item">Run</span>
+          <span class="arrow">&rarr;</span>
+          <span class="item" style="background:var(--cu-blue); color:white;">Get out of the way</span>
+        </div>
+        <div style="margin-top:1.2em; display:flex; justify-content:center; gap:3em;">
+          <img src="assets/iteration.png" alt="Iteration" class="fragment"
+               style="height:200px; object-fit:contain;" />
+          <img src="assets/elephant.jpg" alt="Elephant" class="fragment"
+               style="height:200px; object-fit:contain; border-radius:6px;" />
+        </div>
+        <aside class="notes">Skateboard = minimum viable thing that moves. Ship it, then iterate.</aside>
+      </section>
+
+      <!-- Have Fun -->
+      <section class="dark-slide" style="text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <h1 style="font-size:2.4em; margin-bottom:0.4em;">Have Fun!</h1>
+        <p style="color:var(--cu-gold); font-family:'myriad-pro',sans-serif; font-size:0.9em; margin-top:0;">
+          This is genuinely fun. We promise.
+        </p>
+        <aside class="notes">Energy up. This is the hype slide before they go build.</aside>
+      </section>
+
+      <!-- Codex's Favorite Tools -->
+      <section class="content-slide">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>A Few of Codex&#x2019;s Favorite Tools</h2>
+        <div style="margin-top:0.6em; display:grid; grid-template-columns:1fr 1fr; gap:0.8em 2em;">
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">Git</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">Tracks every change to your files&#x2014;like a detailed undo history for your entire project.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">GitHub</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">Stores your Git projects in the cloud&#x2014;backed up, shareable, and accessible anywhere.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">Node.js</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">Lets Codex run JavaScript on your machine&#x2014;powers most web tools and automation scripts.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">Python</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">A general-purpose language great for data, automation, and gluing things together.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">PowerShell</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">Windows&#x2019; built-in scripting tool&#x2014;lets Codex automate tasks, move files, and talk to your system.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">npm</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">A massive library of free code packages&#x2014;Codex can pull in tools built by millions of developers.</p>
+          </div>
+        </div>
+        <aside class="notes">KB article for publishing to GitHub: https://cedarville.teamdynamix.com/TDClient/2045/Portal/KB/ArticleDet?ID=171134 — don't need to go deep on any of these, just demystify the names.</aside>
+      </section>
+
+      <!-- Glossary -->
+      <section class="content-slide">
+        <img class="slide-logo" src="assets/logo.png" alt="Cedarville University" />
+        <h2>Glossary</h2>
+        <div style="margin-top:0.6em; display:grid; grid-template-columns:1fr 1fr; gap:0.8em 2em;">
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">Repository</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">A project folder tracked by Git&#x2014;contains your code and its full history.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">Branch</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">A parallel version of your project&#x2014;lets you experiment without touching the working original.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">Token</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">How Codex measures text&#x2014;roughly a word or part of a word. Credits are spent in tokens.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">Context Window</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">Everything Codex can &#x201C;see&#x201D; at once&#x2014;files, history, instructions. Outside it, Codex is blind.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">Terminal</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">The text-based window Codex uses to run commands&#x2014;the stuff that scrolls by.</p>
+          </div>
+          <div>
+            <h3 style="font-size:0.82em; color:var(--cu-gold); margin-bottom:0.2em;">Dependency</h3>
+            <p style="font-family:'myriad-pro',sans-serif; font-size:0.78em; margin:0;">Outside code your project relies on. Codex manages these so you don&#x2019;t have to.</p>
+          </div>
+        </div>
+        <aside class="notes">Don't lecture — just point at these if someone looks confused by a term during the workshop.</aside>
+      </section>
+
+
+    </div>
+  </div>
+  <script type="module">
+    import Reveal from 'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.esm.js';
+    import RevealNotes from 'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.esm.js';
+    Reveal.initialize({
+      plugins: [ RevealNotes ],
+      hash: true, transition: 'fade', transitionSpeed: 'fast',
+      controls: true, progress: true, slideNumber: false,
+      center: true, width: '100%', height: '100%', margin: 0,
+      minScale: 1, maxScale: 1,
+    });
+    function syncBackground() {
+      const slide = Reveal.getCurrentSlide();
+      const isDark = slide && slide.classList.contains('dark-slide');
+      document.body.style.background = isDark ? '#003963' : '#ffffff';
+    }
+    Reveal.on('slidechanged', syncBackground);
+    Reveal.on('ready', syncBackground);
+  </script>
+</body>
+</html>
